@@ -382,8 +382,17 @@ body {
 }
 
 .setting-footer-div-one {
-  margin-right: 120px;
-  float: left;
+  /* margin-right: 120px;
+  float: left; */
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .setting-footer-div-two {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .setting-footer-div-two-paragraph {
@@ -395,6 +404,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.32px;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .setting-footer {
@@ -416,11 +426,14 @@ body {
   line-height: 1.5;
   letter-spacing: 0.32px;
   max-width: 264px;
+  text-align: left;
+  margin-bottom: 72px;
 }
 
 .setting-footer-social-networks {
   display: flex;
   gap: 16px;
+  justify-content: center;
 }
 
 .setting-footer-social-networks-item {
@@ -429,8 +442,8 @@ body {
 }
 
 .setting-footer-social-networks-item-a {
-  width: 100%;
-  height: 100%;
+  width: 40px;
+  height: 40px;
   background-color: #4d5ae5;
   border-radius: 50%;
   display: flex;
@@ -474,6 +487,8 @@ body {
 
 .setting-footer-div-three {
   display: block;
+  margin-top: 72px;
+  width: 100%;
 }
 
 .setting-footer-div-three-paragraph {
@@ -485,11 +500,13 @@ body {
   font-weight: 500;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.32px;
+  text-align: center;
 }
 
 .setting-footer-div-three-form {
   gap: 24px;
   display: flex;
+  flex-direction: column;
 }
 
 .setting-footer-div-three-label {
@@ -497,7 +514,8 @@ body {
 }
 
 .setting-footer-div-three-form-input {
-  width: 264px;
+  width: 100%;
+  /* width: 264px; */
   height: 40px;
   border: 1px solid #ffffff;
   background-color: transparent;
@@ -515,7 +533,9 @@ body {
 }
 
 .setting-footer-div-three-form-button {
-  min-width: 165px;
+  /* min-width: 165px; */
+  width: 165px;
+  margin: 0 auto;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -767,6 +787,7 @@ a {
 .container-setting-dop {
   align-items: baseline;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 img {
@@ -798,10 +819,10 @@ img {
   justify-content: center;
   align-items: left;
   /* padding-left: 16px; */
-  gap: 24px;
+  gap: 40px;
   /* margin-top: 72px; */
   margin-top: 0;
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; */
 }
 
 .main-mob .header-address .header-menu .header-address-li {
@@ -820,8 +841,11 @@ img {
   justify-content: center;
   align-items: left;
   padding-left: 16px;
+  margin: 72px 0 48px;
+}
+
+.main-mob .header-address .header-menu {
   gap: 24px;
-  margin-top: 72px;
 }
 
 .main-mob .setting-section-three-social-networks {
@@ -942,6 +966,10 @@ p {
     width: 768px;
   }
 
+  .setting-footer .container-flex {
+    display: block;
+  }
+
   .container-flex {
     display: flex;
   }
@@ -1058,6 +1086,63 @@ p {
   .setting-section-four-list-item:nth-last-child(-n + 2) {
     margin-bottom: 0;
   }
+
+  .main-mob {
+    display: none;
+  }
+
+  .container-setting-dop {
+    flex-direction: row;
+    padding: 0 108px;
+  }
+
+  .setting-footer-div-two {
+    margin-left: 288px;
+  }
+
+  .setting-footer-div-three-form {
+    flex-direction: row;
+  }
+
+  .setting-footer-div-three-form-button {
+    margin: 0;
+  }
+
+  .setting-footer-div-one {
+    /* margin-right: 120px; */
+    float: left;
+    width: auto;
+    text-align: left;
+  }
+
+  .setting-footer-paragraph {
+    text-align: left;
+    margin-bottom: 0px;
+  }
+
+  .setting-footer-div-two-paragraph {
+    text-align: left;
+  }
+
+  .setting-footer-social-networks {
+    justify-content: left;
+  }
+
+  .setting-footer-div-three-form-input {
+    width: 264px;
+  }
+
+  .setting-footer-div-three {
+    margin-top: 72px;
+  }
+
+  .setting-footer-div-three-paragraph {
+    text-align: left;
+  }
+
+  .setting-footer .container-flex {
+    display: block;
+  }
 }
 
 /* For desktop */
@@ -1124,5 +1209,37 @@ p {
 
   .setting-section-four-list-item {
     width: calc((100% - 48px) / 3);
+  }
+
+  .container-setting-dop {
+    padding: 0px;
+  }
+
+  .setting-footer .container-flex {
+    display: flex;
+    padding-top: 0px;
+    justify-content: space-between;
+  }
+
+  .setting-footer-div-one {
+    margin-right: 0;
+    float: none;
+    width: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .setting-footer-div-two {
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .setting-footer-div-three {
+    display: flex;
+    margin-top: 0;
+    width: auto;
+    flex-direction: column;
   }
 }
