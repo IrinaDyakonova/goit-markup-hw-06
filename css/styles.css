@@ -13,7 +13,7 @@ body {
   letter-spacing: 0.54px;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-right: 76px;
+  /* margin-right: 76px; */
 }
 
 .logo-studio {
@@ -91,6 +91,16 @@ body {
   background-position: center;
   background-size: cover;
   margin: 0 auto;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .setting-section-one {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-mob-@2.jpg);
+  }
 }
 
 .setting-section-one-title {
@@ -197,6 +207,7 @@ body {
 }
 
 .setting-section-three-main-title {
+  font-family: 'Roboto', sans-serif;
   text-align: center;
   font-size: 36px;
   font-weight: 700;
@@ -398,8 +409,6 @@ body {
 }
 
 .setting-footer-div-one {
-  /* margin-right: 120px;
-  float: left; */
   width: 100%;
   text-align: center;
 }
@@ -443,7 +452,6 @@ body {
   letter-spacing: 0.32px;
   max-width: 264px;
   text-align: left;
-  margin-bottom: 72px;
 }
 
 .setting-footer-social-networks {
@@ -503,7 +511,6 @@ body {
 
 .setting-footer-div-three {
   display: block;
-  margin-top: 72px;
   width: 100%;
 }
 
@@ -803,13 +810,12 @@ a {
 
 .container-flex {
   display: flex;
-  justify-content: space-between;
 }
 
 .container-setting-dop {
   align-items: baseline;
-  justify-content: space-between;
   flex-direction: column;
+  gap: 72px 24px;
 }
 
 img {
@@ -887,6 +893,12 @@ img {
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
+
+.header-style .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-nav {
@@ -994,10 +1006,6 @@ p {
   }
 
   .setting-footer .container-flex {
-    display: block;
-  }
-
-  .container-flex {
     display: flex;
   }
 
@@ -1008,6 +1016,7 @@ p {
   .container-flex .header-address {
     display: flex;
     flex-direction: column;
+    margin: 0;
   }
 
   .container-flex .header-address .header-menu {
@@ -1068,20 +1077,15 @@ p {
   }
 
   .setting-section-two-li {
-    width: calc((100% - 48px) / 2);
+    width: calc((100% - 24px) / 2);
     display: block;
     margin-bottom: 0px;
-  }
-
-  .setting-section-two-li:nth-child(-n + 2) {
-    margin-bottom: 72px;
   }
 
   .section-two-menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0px;
+    gap: 72px 24px;
   }
 
   .setting-section-two-title {
@@ -1092,17 +1096,22 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0px;
+    gap: 64px 24px;
   }
 
   .setting-section-three-li {
     width: 264px;
-    display: block;
-    margin: 0 12px 64px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
   }
 
   .setting-section-three-li:nth-last-child(-n + 2) {
     margin-bottom: 0;
+  }
+
+  .setting-section-four .container {
+    padding: 0 16px;
   }
 
   .setting-section-four-list {
@@ -1113,7 +1122,7 @@ p {
   }
 
   .setting-section-four-list-item {
-    width: calc((100% - 48px) / 2);
+    width: calc((100% - 26px) / 2);
     margin-bottom: 0px;
   }
 
@@ -1130,10 +1139,6 @@ p {
     padding: 0 108px;
   }
 
-  .setting-footer-div-two {
-    margin-left: 288px;
-  }
-
   .setting-footer-div-three-form {
     flex-direction: row;
     gap: 24px;
@@ -1145,14 +1150,12 @@ p {
 
   .setting-footer-div-one {
     /* margin-right: 120px; */
-    float: left;
     width: auto;
     text-align: left;
   }
 
   .setting-footer-paragraph {
     text-align: left;
-    margin-bottom: 0px;
   }
 
   .setting-footer-div-two-paragraph {
@@ -1167,16 +1170,14 @@ p {
     width: 264px;
   }
 
-  .setting-footer-div-three {
-    margin-top: 97px;
-  }
-
   .setting-footer-div-three-paragraph {
     text-align: left;
   }
 
   .setting-footer .container-flex {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
   }
 
   .setting-modal-window {
@@ -1207,6 +1208,17 @@ p {
   .setting-section-four-list-item-container-img img {
     width: 356px;
     height: 300px;
+  }
+}
+
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 768px) and (min-resolution: 192dpi) {
+  .setting-section-one {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-tab-@2.jpg);
   }
 }
 
@@ -1251,7 +1263,7 @@ p {
   }
 
   .setting-section-two-li {
-    width: calc((100% - 72px) / 4);
+    width: 264px;
     margin-bottom: 0px;
   }
 
@@ -1294,6 +1306,7 @@ p {
   .setting-footer .container-flex {
     display: flex;
     padding-top: 0px;
+    row-gap: 24px;
     justify-content: space-between;
   }
 
@@ -1351,5 +1364,16 @@ p {
   .setting-section-four-list-item-container-img img {
     width: 360px;
     height: 300px;
+  }
+}
+
+@media (min-width: 1166px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 1166px) and (min-resolution: 192dpi) {
+  .setting-section-one {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-desk-@2.jpg);
   }
 }
