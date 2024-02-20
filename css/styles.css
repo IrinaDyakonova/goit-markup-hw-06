@@ -911,7 +911,7 @@ img {
   gap: 40px;
 }
 
-.header-nav .header-menu {
+.container .header-menu {
   display: none;
 }
 
